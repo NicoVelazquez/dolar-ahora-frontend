@@ -1,17 +1,17 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
-import {Dolar} from '../models/dolar';
+import {Dollar} from '../models/dollar';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DolarService {
+export class DollarService {
 
   constructor(private http: HttpClient) {
   }
 
-  public getAllProducts(): Promise<Dolar[]> {
+  public getAllProducts(): Promise<Dollar[]> {
     return this.http.get<any>(`${environment.apiUrl}dolar/get`).toPromise();
   }
 

@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {DolarService} from '../shared/services/dolar.service';
-import {Dolar} from '../shared/models/dolar';
 
 @Component({
   selector: 'app-landing',
@@ -9,18 +7,10 @@ import {Dolar} from '../shared/models/dolar';
 })
 export class LandingComponent implements OnInit {
 
-  mainDolar: Dolar | undefined;
-  dolars: Dolar[] = [];
-
-  constructor(private dolarService: DolarService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.dolarService.getAllProducts().then(dolars => {
-      this.mainDolar = dolars[0];
-      dolars.shift()
-      this.dolars = dolars;
-    });
   }
 
 }

@@ -1,0 +1,46 @@
+<div class="uk-flex uk-flex-center">
+
+  <div class="tile is-parent is-9 is-vertical">
+    <div class="tile dolar">
+
+      <div class="tile is-parent is-5">
+        <div class="tile is-child">
+          <a class="title">{{mainDollarHoy?.name}}</a>
+          <div class="values">
+            <div class="compra">
+              <div class="label">Compra</div>
+              <div class="val">${{mainDollarHoy?.buy}}</div>
+            </div>
+            <div class="venta">
+              <div class="label">Venta</div>
+              <div class="val">${{mainDollarHoy?.sell}}</div>
+            </div>
+          </div>
+          <div class="tile update">
+            <div class="container">
+              <!--              <p>Fuente: Dólar Hoy</p>-->
+              <span>Actualizado el {{mainDollarHoy?.date | date:'short'}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile is-parent is-7 is-vertical">
+        <div class="tile is-child" *ngFor="let dollar of dollarsHoy">
+          <a class="title">{{dollar?.name}}</a>
+          <div class="values">
+            <div class="compra" *ngIf="dollar?.buy !== 0">
+              <div class="label">Compra</div>
+              <div class="val">${{dollar?.buy}}</div>
+            </div>
+            <div class="venta">
+              <div class="label">Venta</div>
+              <div class="val">${{dollar?.sell}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,22 +1,32 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import {registerLocaleData} from '@angular/common';
 
+
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
+
 import {HttpClientModule} from '@angular/common/http';
+import localeEsAr from '@angular/common/locales/es-AR';
+import { HeaderComponent } from './header/header.component';
+import { DollarInfoComponent } from './dollar-info/dollar-info.component';
+
+registerLocaleData(localeEsAr, 'es-Ar');
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    HeaderComponent,
+    DollarInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ { provide: LOCALE_ID, useValue: 'es-Ar' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

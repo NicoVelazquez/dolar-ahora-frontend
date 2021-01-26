@@ -2,3 +2,8 @@
 body {
   margin: 0;
 }
+
+@font-face {
+  font-family: 'fredericka';
+  src: url(assets/FrederickatheGreat-Regular.ttf);
+}

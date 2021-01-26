@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #939393;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.title {
+  color: #1C6EA4;
+  font-family: fredericka, sans-serif;
+  margin: 0;
+
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@media (min-width: 48em) {
+  .container {
+    width: 70%;
+    margin: 0;
+  }
+}
