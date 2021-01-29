@@ -1,0 +1,22 @@
+.title {
+  color: white;
+  font-family: fredericka, sans-serif;
+  background-color: #1C6EA4;
+  padding: 5px 15px;
+
+  text-align: center;
+  margin-top: 15px;
+}
+
+.grid {
+  width: 100%;
+  padding: 6px;
+}
+
+
+
+@media (min-width: 48em) {
+  .grid {
+    width: 85%;
+  }
+}

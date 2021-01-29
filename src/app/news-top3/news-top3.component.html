@@ -1,0 +1,10 @@
+<h2 class="title">{{section}}</h2>
+
+<div class="container uk-flex uk-flex-center">
+
+  <div class="grid uk-grid uk-child-width-1-1@s uk-child-width-1-3@m" uk-grid>
+    <app-news-card *ngFor="let n of news" [news]="n" [section]="section"></app-news-card>
+  </div>
+
+</div>
+

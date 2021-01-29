@@ -1,0 +1,36 @@
+.card {
+  width: fit-content;
+  margin: auto;
+}
+
+.child {
+  display: flex;
+}
+
+.child div {
+  flex-grow: 1;
+  width: 0;
+}
+
+.wrapper {
+  display: inline-block;
+}
+
+.image {
+  position: relative;
+  border-bottom: 3px solid #1C6EA4;
+  margin-bottom: 8px;
+}
+
+.section {
+  position: absolute;
+  bottom: -12px;
+  z-index: 1;
+}
+
+.section p {
+  margin: 0;
+  background-color: #1C6EA4;
+  color: white;
+  padding: 0 5px;
+}
