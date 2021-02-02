@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { DollarInfoComponent } from './dollar-info/dollar-info.component';
 import { NewsCardComponent } from './news-top3/news-card/news-card.component';
 import { NewsTop3Component } from './news-top3/news-top3.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 registerLocaleData(localeEsAr, 'es-Ar');
 
@@ -22,7 +23,8 @@ registerLocaleData(localeEsAr, 'es-Ar');
     HeaderComponent,
     DollarInfoComponent,
     NewsCardComponent,
-    NewsTop3Component
+    NewsTop3Component,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
