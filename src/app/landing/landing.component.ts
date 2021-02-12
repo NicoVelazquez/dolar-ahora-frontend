@@ -16,11 +16,11 @@ export class LandingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.newsService.getTopEconomyNews().then(news => {
+    this.newsService.getNews('economía', 3).then(news => {
       this.economyNews = news;
     });
 
-    this.newsService.getTopPoliticNews().then(news => {
+    this.newsService.getNews('política', 3).then(news => {
       this.politicNews = news;
     });
   }

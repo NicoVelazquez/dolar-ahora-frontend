@@ -65,3 +65,20 @@
     <app-news-card *ngFor="let n of news" [news]="n" [section]="section"></app-news-card>
   </div>
 </div>
+
+<div class="pagination-container uk-flex uk-flex-center">
+  <ul class="uk-pagination pagination">
+    <li>
+      <a (click)="getPreviousPage()" *ngIf="currentPage !== 1">
+        <span class="uk-margin-small-right" uk-pagination-previous></span> Anterior
+      </a>
+    </li>
+    <li class="uk-margin-auto-left">
+      <a (click)="getNextPage()" *ngIf="currentPage < totalPages">
+        Siguiente<span class="uk-margin-small-left" uk-pagination-next></span>
+      </a>
+    </li>
+  </ul>
+
+</div>
+

@@ -11,18 +11,16 @@ export class NewsService {
   constructor(private http: HttpClient) {
   }
 
-  public getTopEconomyNews(): Promise<News[]> {
-    return this.http.get<any>(`${environment.apiUrl}/news/get-top-economy`).toPromise();
-  }
-
-  public getTopPoliticNews(): Promise<News[]> {
-    return this.http.get<any>(`${environment.apiUrl}/news/get-top-politic`).toPromise();
-  }
-
-  public getNews(sectionName: string): Promise<News[]> {
+  public getNews(sectionName: string, numberOfResults: number): Promise<News[]> {
     sectionName.toLowerCase() === 'economía' ? sectionName = 'economy' : undefined;
     sectionName.toLowerCase() === 'política' ? sectionName = 'politic' : undefined;
-    return this.http.get<any>(`${environment.apiUrl}/news/get-${sectionName}`).toPromise();
+    return this.http.get<any>(`${environment.apiUrl}/news/get-${sectionName}/${numberOfResults}`).toPromise();
+  }
+
+  public getNewsPaginated(sectionName: string, page: number, newsPerPage: number, topResults: number): Promise<any> {
+    sectionName.toLowerCase() === 'economía' ? sectionName = 'economy' : undefined;
+    sectionName.toLowerCase() === 'política' ? sectionName = 'politic' : undefined;
+    return this.http.get<any>(`${environment.apiUrl}/news/get-${sectionName}/${page}/${newsPerPage}/${topResults}`).toPromise();
   }
 
 }
