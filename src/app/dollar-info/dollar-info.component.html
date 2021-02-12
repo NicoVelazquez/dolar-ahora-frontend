@@ -5,7 +5,7 @@
 
       <div class="tile is-parent is-5">
         <div class="tile is-child">
-          <a class="title">{{mainDollarHoy?.name}}</a>
+          <p class="title">{{mainDollarHoy?.name}}</p>
           <div class="values">
             <div class="compra">
               <div class="label">Compra</div>
@@ -27,7 +27,7 @@
 
       <div class="tile is-parent is-7 is-vertical">
         <div class="tile is-child" *ngFor="let dollar of dollarsHoy">
-          <a class="title">{{dollar?.name}}</a>
+          <p class="title">{{dollar?.name}}</p>
           <div class="values">
             <div class="compra" *ngIf="dollar?.buy !== 0">
               <div class="label">Compra</div>

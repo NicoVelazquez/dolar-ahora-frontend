@@ -19,4 +19,10 @@ export class NewsService {
     return this.http.get<any>(`${environment.apiUrl}/news/get-top-politic`).toPromise();
   }
 
+  public getNews(sectionName: string): Promise<News[]> {
+    sectionName.toLowerCase() === 'economía' ? sectionName = 'economy' : undefined;
+    sectionName.toLowerCase() === 'política' ? sectionName = 'politic' : undefined;
+    return this.http.get<any>(`${environment.apiUrl}/news/get-${sectionName}`).toPromise();
+  }
+
 }

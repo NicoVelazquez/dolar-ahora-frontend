@@ -39,6 +39,15 @@
   margin: 0;
 }
 
+a {
+  color: #666666;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 @media (min-width: 48em) {
   .title p {
     margin-bottom: 15px;

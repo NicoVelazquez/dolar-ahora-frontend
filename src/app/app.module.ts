@@ -10,9 +10,10 @@ import {HttpClientModule} from '@angular/common/http';
 import localeEsAr from '@angular/common/locales/es-AR';
 import { HeaderComponent } from './header/header.component';
 import { DollarInfoComponent } from './dollar-info/dollar-info.component';
-import { NewsCardComponent } from './news-top3/news-card/news-card.component';
+import { NewsCardComponent } from './news-card/news-card.component';
 import { NewsTop3Component } from './news-top3/news-top3.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NewsSectionComponent } from './news-section/news-section.component';
 
 registerLocaleData(localeEsAr, 'es-Ar');
 
@@ -24,7 +25,8 @@ registerLocaleData(localeEsAr, 'es-Ar');
     DollarInfoComponent,
     NewsCardComponent,
     NewsTop3Component,
-    NotFoundComponent
+    NotFoundComponent,
+    NewsSectionComponent
   ],
   imports: [
     BrowserModule,

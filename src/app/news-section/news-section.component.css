@@ -1,0 +1,261 @@
+.section-title h2 {
+  color: #1C6EA4;
+  font-family: fredericka, sans-serif;
+}
+
+.tile {
+  align-items: stretch;
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: min-content;
+}
+
+.tile.is-parent {
+  padding: 6px;
+}
+
+.nota--degrade {
+  margin-bottom: 20px;
+}
+
+.nota {
+  position: relative;
+}
+
+article {
+  display: block;
+}
+
+.nota__media {
+  position: relative;
+  height: max-content;
+  border-bottom: 3px solid #1C6EA4;
+}
+
+.nota--degrade .nota__degrade {
+  position: absolute;
+  top: 0;
+  bottom: 3px;
+  width: 100%;
+  background-image: -moz-linear-gradient(to bottom, rgba(51, 51, 51, .4), rgba(51, 51, 51, .6), #000);
+  background-image: -ms-linear-gradient(to bottom, rgba(51, 51, 51, .4), rgba(51, 51, 51, .6), #000);
+  background-image: -webkit-linear-gradient(to bottom, rgba(51, 51, 51, .4), rgba(51, 51, 51, .6), #000);
+  background-image: -o-linear-gradient(to bottom, rgba(51, 51, 51, .4), rgba(51, 51, 51, .6), #000);
+  background-image: linear-gradient(to bottom, rgba(51, 51, 51, .4), rgba(51, 51, 51, .6), #000);
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+
+.nota--degrade .nota__volanta {
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.nota__volanta p {
+  margin: 0;
+}
+
+.nota--degrade .nota__body {
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+  left: 7.5%;
+  text-align: center;
+  padding-bottom: 20px;
+  z-index: 2;
+}
+
+.nota__body {
+  padding: 10px 0;
+  padding-top: 15px;
+}
+
+.nota__titulo {
+  margin-bottom: 5px;
+}
+
+.nota__titulo h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.seccion .apertura.disenio .notas_side, .seccion .apertura.disenio .title {
+  padding: 0 21px;
+}
+
+.tile.is-vertical {
+  flex-direction: column;
+}
+
+.is-vertical .is-child {
+  border-bottom: .5px solid #8e8e8e;
+  padding-bottom: 10px;
+}
+
+.tile > .tile.is-child:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.nota--linea {
+  display: flex;
+}
+
+.nota--linea .nota__media {
+  flex-basis: 30%;
+  border-bottom: unset;
+
+}
+
+.nota__media {
+  position: relative;
+  height: max-content;
+  border-bottom: 3px solid #1C6EA4;
+}
+
+
+.nota--linea .nota__body {
+  flex-basis: 70%;
+  padding: 0 5px 0 12px;
+}
+
+.nota--linea .nota__volanta {
+  margin-bottom: 5px;
+  position: unset;
+}
+
+img {
+  display: block;
+  position: relative;
+}
+
+.nota--linea .nota__titulo h2 a, .seccion .notas_secundarias .nota__titulo h2 a {
+  background: 0 0;
+  display: block;
+  display: -webkit-box;
+  max-height: 35.2px;
+  font-size: 1rem;
+  line-height: 1.1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #000;
+  font-weight: 100;
+}
+
+.nota__volanta p span {
+  font: bold .75rem Roboto, Helvetica, Arial, sans-serif;
+  background-color: #1C6EA4;
+  color: #fff;
+  padding: 2px 5px;
+  text-transform: uppercase;
+}
+
+.nota--degrade .nota__titulo h2 a {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.is-vertical .is-child:last-child {
+  border-bottom: unset;
+}
+
+.other-news-container {
+  margin-top: 10px;
+  width: 95%;
+}
+
+@media (min-width: 48em) {
+
+  .container {
+    width: 90%;
+  }
+
+  .other-news-container {
+    margin-top: 50px;
+    width: 72%;
+  }
+
+  .tile:not(.is-child) {
+    display: flex;
+  }
+
+  .tile.is-7 {
+    flex: none;
+    width: 58.33333%;
+  }
+
+  .nota--degrade .nota__volanta {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nota--degrade .nota__volanta p {
+    margin: 0;
+  }
+
+  .nota--degrade .nota__titulo h2 {
+    font-size: 2.125rem;
+  }
+
+  .seccion .apertura.disenio .is-vertical, .seccion .notas_secundarias {
+    padding: 6px;
+  }
+
+  .is-vertical .is-child {
+    padding-bottom: 0;
+  }
+
+  .nota--linea {
+    display: flex;
+  }
+
+  .nota--linea .nota__media {
+    flex-basis: 40%;
+  }
+
+  .nota--linea .nota__body {
+    flex-basis: 60%;
+    padding: 5px 5px 5px 12px;
+  }
+
+  .nota--linea .nota__titulo h2 {
+    background: 0 0;
+    display: block;
+    display: -webkit-box;
+    max-height: 44px;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+}
+
+@media (min-width: 64em) {
+
+  .container {
+    width: 70%;
+  }
+}

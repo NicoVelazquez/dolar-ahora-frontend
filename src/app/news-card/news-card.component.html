@@ -3,12 +3,12 @@
     <div class="image">
       <img [src]="news?.image" [alt]="'Dólar Blue ' + section" [title]="news?.title">
       <div class="section">
-        <p>{{section | titlecase}}</p>
+        <a href="seccion/{{section |lowercase}}"><p>{{section | titlecase}}</p></a>
       </div>
     </div>
     <div class="child">
       <div class="title">
-        <p>{{news?.title}}</p>
+        <a href="{{news?.link}}" target="_blank"><p>{{news?.title}}</p></a>
       </div>
     </div>
   </div>

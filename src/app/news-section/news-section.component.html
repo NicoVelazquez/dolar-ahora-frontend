@@ -1,0 +1,67 @@
+<div class="section-title uk-flex uk-flex-center">
+  <h2>{{section | titlecase}}</h2>
+</div>
+
+<div class="top-news uk-flex uk-flex-center">
+  <div class="container">
+
+    <div class="tile notas_cont">
+
+      <div class="tile is-parent is-7 nota_especial">
+
+        <div class="tile is-child">
+          <article class="nota nota--degrade">
+            <div class="nota__media economia">
+
+              <img [src]="mainNews?.image" [alt]="'Dólar Blue'" [title]="mainNews?.title">
+
+              <div class="nota__volanta"><p><a><span class="color economia">{{section}}</span></a></p>
+              </div>
+            </div>
+            <a class="nota__degrade"></a>
+            <div class="nota__body">
+              <div class="nota__titulo">
+                <h2><a href="{{mainNews?.link}}" target="_blank">{{mainNews?.title}}</a></h2>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <div class="tile is-vertical is-parent notas_side">
+
+        <div class="tile is-child" *ngFor="let news of top3News">
+          <article class="nota nota--linea">
+            <div class="nota__media">
+
+              <img [src]="news?.image" [alt]="'Dólar Blue'" [title]="news?.title">
+
+            </div>
+            <div class="nota__body">
+              <div class="nota__volanta"><p><a><span class="color">{{section}}</span></a></p></div>
+              <div class="nota__titulo">
+                <h2><a href="{{news?.link}}" target="_blank">{{news?.title}}</a></h2>
+              </div>
+              <!--              <div class="nota__autor">-->
+              <!--                <a><span>Por</span>Iván Sasovsky</a>-->
+              <!--              </div>-->
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="other-news uk-flex uk-flex-center">
+  <div
+    class="other-news-container grid uk-grid uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center"
+    uk-grid>
+    <app-news-card *ngFor="let n of news" [news]="n" [section]="section"></app-news-card>
+  </div>
+</div>

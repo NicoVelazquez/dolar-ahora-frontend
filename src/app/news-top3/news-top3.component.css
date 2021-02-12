@@ -17,6 +17,10 @@
 
 @media (min-width: 48em) {
   .grid {
-    width: 85%;
+    width: 73%;
+  }
+
+  .uk-grid {
+    margin: 0;
   }
 }
