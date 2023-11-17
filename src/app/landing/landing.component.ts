@@ -16,12 +16,9 @@ export class LandingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.newsService.getNews('economía', 3).then(news => {
-      this.economyNews = news;
-    });
-
-    this.newsService.getNews('política', 3).then(news => {
-      this.politicNews = news;
+    this.newsService.getNews( 3).then(news => {
+      this.economyNews = news.economy;
+      this.politicNews = news.politics;
     });
   }
 

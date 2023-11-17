@@ -12,7 +12,7 @@ export class DollarService {
   }
 
   public getAllProducts(): Promise<Dollar[]> {
-    return this.http.get<any>(`${environment.apiUrl}/dollar/get`).toPromise();
+    return this.http.get<any>(`${environment.apiUrl}/dollar`).toPromise();
   }
 
 }

@@ -74,7 +74,7 @@
       </a>
     </li>
     <li class="uk-margin-auto-left">
-      <a (click)="getNextPage()" *ngIf="currentPage < totalPages">
+      <a (click)="getNextPage()" *ngIf="hasNextPage">
         Siguiente<span class="uk-margin-small-left" uk-pagination-next></span>
       </a>
     </li>
